@@ -1,6 +1,6 @@
 # Udacity FEND MyReads Project
 
-The starter template for the project for Udacity's React Fundamentals course. The template is to save you time by providing a static example of the CSS and HTML markup that used, but without any of the React code that to complete the project. The template modifiy and added interactivity to the app by refactoring the static code in this template.
+The starter template for the project for Udacity's React Fundamentals course. The template is to save time by providing a static example of the CSS and HTML markup that used, but without any of the React code that to complete the project. The template modifiy and added interactivity to the app by refactoring the static code in this template.
 
 [Starter Template for React App ](https://github.com/facebookincubator/create-react-app) 
 
