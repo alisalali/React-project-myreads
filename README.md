@@ -1,8 +1,7 @@
 # Udacity FEND MyReads Project
 MyReads is React app project that lets you manage your bookshelf. Supports three shelves Currently Reading, Read and Want to Read. Additionally you can search and add books to any shelf.
 
-![My reads App](https://github.com/alisalali/React-project-myreads/tree/master/public/app-preview.png)
-
+<img src="https://raw.githubusercontent.com/alisalali/React-project-myreads/master/public/app-preview.png" width="450">
 
 
 ## Requirements
