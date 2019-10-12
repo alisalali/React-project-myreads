@@ -12,12 +12,20 @@ export class Search extends Component {
         }
     }
     //calling getBook api to query the books , and return books array object to update the state
-    getBook = async event => {
+    updateQuery = event => {
+        const querytxt = event.target.value;
+        if (querytxt.length > 0) {
+            this.setState({ query: querytxt }, () => {
+                this.getBook(this.state.query)
+            });
+        } else {
+            this.setState({ books: [], query: '' })
+        }
+    }
+    getBook = async (q) => {
         try {
-            const query = event.target.value;
-            this.setState({ query });
-            if (query.trim()) {
-                const res = await BooksAPI.search(query)
+            const res = await BooksAPI.search(this.state.query)
+            if (this.state.books !== res) {
                 if (res.error) {
                     this.setState({ books: [] })
                 } else {
@@ -27,7 +35,8 @@ export class Search extends Component {
             else {
                 this.setState({ books: [] })
             }
-        } catch (error) {
+        }
+        catch (error) {
             console.log(error)
         }
     }
@@ -41,7 +50,7 @@ export class Search extends Component {
                             Close
                             </Link>
                         <div className="search-books-input-wrapper">
-                            <input type="text" placeholder="Search by title or author" value={this.state.query} onChange={this.getBook} />
+                            <input type="text" placeholder="Search by title or author" value={this.state.query} onChange={this.updateQuery} />
                         </div>
                     </div>
                     <div className="search-books-results">
